@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: hsl(27, 66%, 92%);
+
+}
+.container{
+  width:35%;
+  margin: 2em auto;
+}
+.balance-container{
+  background-color: hsl(10, 79%, 65%);
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding:1em;
+  border-radius: 10px;
+}
+.balance{
+  color:white;
+}
+.balance span{
+  display: inline-block;
+  font-size: 1.2em;
+  margin-top:10px;    
+}
+.datas{
+  margin: 1em auto 0 auto;
+  background-color:white;
+  padding:1em;
+  border-radius: 10px;
+}
+.datas .head{
+  display:block;
+  padding:10px;
+  font-size:1.2em;
+  font-weight: 700;
+  margin-bottom: 3em;
+}
+.chart-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  align-items: flex-end;
+  
+}
+.column>div:hover{
+  opacity: 0.8;
+}
+.column>div:hover .column-value {
+  display: flex;
+  position: absolute;
+  top:-30px;
+  padding:5px;
+  border-radius: 5px;
+  color:white;
+  background-color:black;
+  left:50%;
+  transform: translateX(-50%);
+  font-size: 0.8em;
+}
+.column-value{
+  display:none;
+  
+}
+
+.column>span{
+  font-size:0.8rem;
+  display: block;
+  text-align:center;
+  margin-top:5px;
+  color:#A9A9A9;
+
+}
+hr{
+  border:none;
+  height:0;
+  border-top:1px solid #A9A9A9;
+  margin: 1em 0;
+}
+.column>div{
+background-color:  hsl(10, 79%, 65%);
+border-radius: 5px;
+position: relative;
+}
+.column>.max{
+  background-color:hsl(186, 34%, 60%);
+}
+.balance2-container{
+  display:flex;
+  justify-content: space-between;
+}
+.total{
+  display: flex;
+  flex-direction: column;
+}
+.gray{
+  color:#A9A9A9;
+}
+.attribution{
+  text-align: center;
+}
+@media screen and (max-width:1100px) {
+  .container{
+    width:45%;
+    margin: 2em auto;
+  }
+}
+@media screen and (max-width:850px) {
+  .container{
+    width:60%;
+    margin: 2em auto;
+  }
+}
+@media screen and (max-width:650px) {
+  .container{
+    width:75%;
+    margin: 2em auto;
+  }
+}
+@media screen and (max-width:500px) {
+  .container{
+    width:90%;
+    margin: 2em auto;
+  }
+  .column>div:hover .column-value {
+   
+    font-size: 0.65em;
+  }
+}
